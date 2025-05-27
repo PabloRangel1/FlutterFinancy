@@ -1,30 +1,29 @@
+
 import 'package:flutter/material.dart';
- 
+
 void main() {
-  runApp(const MyApp());
+  runApp(const Myapp());
 }
- 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
- 
+
+class Myapp extends StatelessWidget {
+  const Myapp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.red),
       home: ContactsPage(),
     );
   }
 }
- 
-class ContactsPage extends StatefulWidget {
+
+class ContactsPage  extends StatefulWidget {
   @override
   State<ContactsPage> createState() => _ContactsPageState();
 }
- 
+
 class _ContactsPageState extends State<ContactsPage> {
   final contacts = [
     Contact(name: "John Doe", email: 'john_doeoe@gmail.com'),
@@ -68,7 +67,7 @@ class _ContactsPageState extends State<ContactsPage> {
     );
   }
 }
- 
+
 class Contact {
   String name;
   String email;
@@ -76,5 +75,3 @@ class Contact {
  
   Contact({required this.name, required this.email});
 }
- 
- 
